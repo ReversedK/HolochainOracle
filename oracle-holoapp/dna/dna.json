@@ -1,10 +1,10 @@
 {
   "Version": 0,
   "UUID": "00000000-0000-0000-0000-000000000000",
-  "Name": "clutter",
+  "Name": "HolochainOracle",
   "RequiresVersion": 21,
   "Properties": {
-    "description": "distributed micro-blogging (Twitter clone)",
+    "description": "Oracle for Holochain",
     "language": "en",
     "enableDirectoryAccess" : "true"
   },
