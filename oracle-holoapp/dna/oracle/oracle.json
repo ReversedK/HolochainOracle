@@ -1,0 +1,10 @@
+{
+	"title": "Oracle Schema",
+	"type": "object",
+	"properties": {
+		"value": {
+			"type": "object"
+		}
+	},
+    "required": ["value"]
+}

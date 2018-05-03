@@ -1,0 +1,72 @@
+{
+  "Version": 0,
+  "UUID": "00000000-0000-0000-0000-000000000000",
+  "Name": "clutter",
+  "RequiresVersion": 21,
+  "Properties": {
+    "description": "distributed micro-blogging (Twitter clone)",
+    "language": "en",
+    "enableDirectoryAccess" : "true"
+  },
+  "PropertiesSchemaFile": "properties_schema.json",
+  "DHTConfig": {
+    "HashType": "sha2-256"
+  },
+  "BasedOn": {
+    "H": null
+  },
+  "Zomes": [
+    {
+      "Name" : "oracle",
+      "Description": "Oracle, name says it all",
+      "RibosomeType": "js",
+      "CodeFile": "oracle.js",
+      "Config": {
+        "ErrorHandling": "throwErrors"
+      },
+      "Entries": [
+        {
+          "Name": "callQueue",
+          "DataFormat": "links"
+        },
+        {
+          "Name": "callResults",
+          "DataFormat": "links"
+        },
+        {
+          "Name": "APICall",
+          "DataFormat": "json",
+          "Sharing": "public",
+          "SchemaFile": "apicall.json"
+        },{
+          "Name": "callResult",
+          "DataFormat": "json",
+          "Sharing": "public",
+          "SchemaFile": "callresult.json"
+        }
+      ],
+      "Functions": [ 
+        {
+          "Name": "queueAPICall",
+          "CallingType": "json",
+          "Exposure":"public"
+        },
+        {
+          "Name": "getResult",
+          "CallingType": "string",
+          "Exposure":"public"
+        },        
+        {
+          "Name": "pollMe",
+          "CallingType": "json",
+          "Exposure":"public"
+        },    
+        {
+          "Name": "receive",
+          "CallingType": "json",
+          "Exposure":"public"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+	"title": "Call Result Schema",
+	"type": "object",
+	"properties": {
+		"hash": {
+			"type": "string"
+		},
+		"result": {
+			"type": "object"
+		},
+		"status": {
+			"type": "integer"
+		},
+		"error": {
+			"type": "object"
+		}, 
+		"stamp" : {
+			"type":"integer"
+		}
+
+	},
+	"required": ["hash","result","status","error","stamp"]
+}

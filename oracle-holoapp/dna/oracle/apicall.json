@@ -1,0 +1,16 @@
+{
+	"title": "Post Schema",
+	"type": "object",
+	"properties": {
+		"uri": {
+			"type": "string"
+		},
+		"payload":{
+			"type":"object"
+		},		
+		"stamp": {
+			"type": "integer"
+		}
+	},
+	"required": ["uri","payload"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "oracle-nodejs",
+  "version": "1.0.0",
+  "description": "node bridge for Holo-Oracle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "superagent": "^3.8.3"
+  }
+}
